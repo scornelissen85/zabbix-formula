@@ -25,5 +25,5 @@ include:
     - unless: test -f {{ file }}.applied
     - require:
       - file: {{ file }}
-      - pkg: mysql-client
+      - pkg: {{ zabbix.mysql_pkg }}
 {% endfor -%}
